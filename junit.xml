@@ -1,0 +1,20 @@
+<testsuites name="jest tests" tests="8" failures="0" time="2.152">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2020-04-06T20:41:18" time="2.152" tests="8">
+    <testcase classname=" Clicking on any card should display the name in textbox" name=" Clicking on any card should display the name in textbox" time="0.125">
+    </testcase>
+    <testcase classname=" Once the card selected based on the current stage able move forward and backward" name=" Once the card selected based on the current stage able move forward and backward" time="0.098">
+    </testcase>
+    <testcase classname=" If the card/task selected from the 1st stage should disable the &quot;Move backward&quot; button." name=" If the card/task selected from the 1st stage should disable the &quot;Move backward&quot; button." time="0.069">
+    </testcase>
+    <testcase classname=" If the card/task selected from the last stage should disable the &quot;Move forward&quot; button." name=" If the card/task selected from the last stage should disable the &quot;Move forward&quot; button." time="0.072">
+    </testcase>
+    <testcase classname=" After selecting task from 2nd stage and clicking on Move forward button move the card to 3rd stage." name=" After selecting task from 2nd stage and clicking on Move forward button move the card to 3rd stage." time="0.072">
+    </testcase>
+    <testcase classname=" After selecting task from 2nd stage and clicking on Move backward button move the card to 1st stage." name=" After selecting task from 2nd stage and clicking on Move backward button move the card to 1st stage." time="0.075">
+    </testcase>
+    <testcase classname=" Move forward an item till the last state and should disable the move forward button" name=" Move forward an item till the last state and should disable the move forward button" time="0.087">
+    </testcase>
+    <testcase classname=" Move backward an item till the first state and should disable the move backward button" name=" Move backward an item till the first state and should disable the move backward button" time="0.081">
+    </testcase>
+  </testsuite>
+</testsuites>
