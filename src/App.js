@@ -34,22 +34,21 @@ class App extends Component {
   }
 
   onBackClick = () => {
-    const selectedTask = this.state.tasks.filter(item => item.name === this.state.selectedTask.name);
-    if (selectedTask[0].stage !== 0) {
-      selectedTask[0].stage =  selectedTask[0].stage - 1;
-      const newList = this.state.tasks.slice();
-      this.setState({task: newList});
-    }
+    const selectedTask = this.state.tasks.map(item => {
+      if(item.name === this.state.selectedTask.name && this.state.selectedTask.stage !== 0) {
+        item.stage =  item.stage - 1;
+      }
+    });
+    this.setState({task: selectedTask});
   }
 
   onForwardClick = () => {
-    const selectedTask = this.state.tasks.filter(item => item.name === this.state.selectedTask.name);
-    if (selectedTask[0].stage !== 3) {
-      selectedTask[0].stage =  selectedTask[0].stage + 1;
-      const newList = this.state.tasks.slice();
-      this.setState({task: newList});
-    }
-    
+    const selectedTask = this.state.tasks.map(item => {
+      if(item.name === this.state.selectedTask.name && this.state.selectedTask.stage !== 3) {
+        item.stage =  item.stage + 1;
+      }
+    });
+    this.setState({task: selectedTask});
   }
 
 

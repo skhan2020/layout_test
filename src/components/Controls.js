@@ -1,25 +1,6 @@
 import React, { Component } from 'react';
 
 class Controls extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      formInput: '',
-      backDisabled: true,
-      forwardDisabled: true,
-    }
-  }
-  static getDerivedStateFromProps(props, state) {
-    if (props.task.name !== state.formInput ||
-      props.task.stage !== state.stage) {
-      return {
-        formInput: props.task.name,
-        backDisabled: props.task.stage === 0,
-        forwardDisabled: props.task.stage === 3,
-      };
-    }
-    return null;
-  }
   render() {
     const { onBackClick, onForwardClick } = this.props;
     return (
@@ -31,11 +12,11 @@ class Controls extends Component {
             placeholder="Selected task name"
             style={{ fontSize: '1rem' }}
             data-testid="selected-task-field"
-            value={this.state.formInput}
+            value={this.props.task.name}
           />
           <button
             style={{ marginLeft: '1rem' }}
-            disabled={!this.state.formInput || this.state.backDisabled}
+            disabled={!this.props.task.name || this.props.task.stage === 0}
             data-testid="move-back-btn"
             onClick={onBackClick}
           >
@@ -43,7 +24,7 @@ class Controls extends Component {
           </button>
           <button
             style={{ marginLeft: '1rem' }}
-            disabled={!this.state.formInput || this.state.forwardDisabled}
+            disabled={!this.props.task.name || this.props.task.stage === 3}
             data-testid="move-forward-btn"
             onClick={onForwardClick}
           >
